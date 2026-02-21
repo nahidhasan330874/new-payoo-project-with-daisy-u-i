@@ -26,15 +26,30 @@ function setBalance(value){
 function showOnly(id){
  const addMoney = document.getElementById('Add-Money');
  const cashOut = document.getElementById('Cashout');
+ const  transfer = document.getElementById('Transfer-Money');
+ const transaction  = document.getElementById('history');
+
+const lastHistory =  document.getElementById("PAyment-history");
+
 
 //  sobaike hide kore dibo
 
 addMoney.classList.add('hidden');
 cashOut.classList.add('hidden');
+transfer.classList.add('hidden');
+transaction.classList.add('hidden');
+lastHistory.style.display = "none";
+
 
 //  id wala Elament ta ke tumi show koraw
 
  const selected = document.getElementById(id);
  selected.classList.remove('hidden');
 
+
 }
+
+
+
+
+ 
