@@ -27,20 +27,19 @@ function showOnly(id){
  const addMoney = document.getElementById('Add-Money');
  const cashOut = document.getElementById('Cashout');
  const  transfer = document.getElementById('Transfer-Money');
- 
+ const  getBonus = document.getElementById('get-bonus');
  const  payBill = document.getElementById('pay-bill');
  const transaction  = document.getElementById('history');
 
-const lastHistory =  document.getElementById("PAyment-history");
+ const lastHistory =  document.getElementById("PAyment-history");
 
 
-//  sobaike hide kore dibo
+ //  sobaike hide kore dibo
 
 addMoney.classList.add('hidden');
 cashOut.classList.add('hidden');
 transfer.classList.add('hidden');
-
-
+getBonus.classList.add('hidden');
 payBill.classList.add('hidden');
 transaction.classList.add('hidden');
 lastHistory.style.display = "none";
