@@ -1,19 +1,18 @@
 document.getElementById("cashout-btn").addEventListener("click", function () {
   // 1 - get the agent number & validate
   const cashOutNumber = getValueFormInput("cashout-number");
-    if( cashOutNumber.length !=11){
+    if( cashOutNumber.length !=11  ){
         alert('Invalid Number');
         return;
     }
   //  2 - get the Amount
   const cashOutAmount = getValueFormInput("cashout-amount");
 
-  // 3- get Current Balance
-  const balanceElement = document.getElementById("balance");
-  const balance = balanceElement.innerText;
+   //  3- machine e
+   const currentBalance = getBalance();
 
    // 4- Calculate new Balance
-   const newBalance = Number(balance) - Number(cashOutAmount);
+   const newBalance = currentBalance  - Number(cashOutAmount);
    if( newBalance < 0){
      alert('Invalid Amount');
      return;
@@ -23,7 +22,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
    const pin = getValueFormInput('cashout-pin');
    if( pin === "1234"){
      alert('Cashout Successful');
-      balanceElement.innerText = newBalance ;
+       setBalance(newBalance);
    }else{
        alert("Invalid Pin");
        return;
