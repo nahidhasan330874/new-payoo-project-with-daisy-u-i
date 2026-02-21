@@ -11,16 +11,14 @@ document.getElementById('btn-login').addEventListener('click', function(){
 
     // 3. match pin & mobile number 
     if(Number == "01234567890" &&  pin == "1234" ){
-
         // 3-1  true :: > alert> homepage
         alert('login Success');
-
         // window.location.replace('/home.html')
         window.location.assign('./home.html');
     }
     else{
+        // 3-2  false :: > alert> return
         alert('login Failed');
         return;
     }
-    // 3-2  false :: > alert> return
 })
